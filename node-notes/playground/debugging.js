@@ -2,7 +2,7 @@ let person = {
     name: 'Murray'
 }
 
-person.age = 25
+person.age = 24
 
 debugger
 

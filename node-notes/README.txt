@@ -15,9 +15,10 @@ TOPICS COVERED
 -- module
   -- module.exports // export functionality that can then be required by other files
 
--- lodash //utitlity package 
+-- lodash // utitlity package with useful JS methods
   -- _.isString
   -- _.uniq //filters array for unique values
+  -- _.clone , _.cloneDeep // shallow and deep clone of an object respectively
 
 -- nodemon
 
@@ -27,6 +28,7 @@ TOPICS COVERED
   eg: node app.js add (command) --title="secret" (key/value pair) --body="Hello there"(key/value pair)
 
 -- promisfy (require utils)
+  -- requires function to follow the common Node.js callback style, ie taking an error and success parameter in a function as the last argument. eg; example(arg1, (err, data) => {}) ...
 
 -- JSON
   -- JavaScript Object Notation // a representation of data that can then be easily passed around and utilized with different programming languages
@@ -34,6 +36,10 @@ TOPICS COVERED
   -- JSON.stringify(object) // takes an object and converts it into a JSON string
 
 -- Debugging
+  -- | --inspect-brk // connect to chrome debugger via chrome://inspect
+    -- open dedicated dev tools for chrome 
+    -- blue play button operates just like c command, going until debugger line
+    -- click a line number to create a break point
   -- inspect // launch debugger when running app from command line, goes through application statement by statement. eg; node inspect app.js
   -- n // go to next statement in code
   -- list(numOfLines) // lists 10 lines of your code
