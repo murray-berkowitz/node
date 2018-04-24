@@ -11,7 +11,10 @@ if (command == 'add') {
   _.isObject(note) ? console.log('Note successfully added') : console.log('Title already in use')   
 }
 else if (command == 'list') {
-  console.log(notes.getAll())
+  let allNotes = notes.getAll()
+  allNotes.forEach(e => {
+    console.log(`${e.title} \n ${e.body} \n\n`)
+  })
 }
 else if (command == 'read'){
   let note = notes.readNote(argv.title)
