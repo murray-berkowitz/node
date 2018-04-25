@@ -46,3 +46,6 @@ TOPICS COVERED
   -- c // continue until the end of program
   -- REPL // read evaluate print loop, which allows us to view, manipulate our code in its current executed state in the debugger
   -- debugger // add this line in your code, so when you hit the 'c' command in the debugger, it will skip towards the closest debugger statement. This is the preferred way of moving around your code in debug
+
+-- Yargs
+  -- .command('name of command', 'descrition of command', {argument}) // describes a command, also in last argument takes the parameters of said command and further describes them, requires them, aliases etc

@@ -4,7 +4,30 @@ const yargs = require('yargs')
 
 const notes = require('./notes')
 
-const argv = yargs.argv //yargs verion of the argument vector object
+const titleOptions = {
+  describe: 'Title of note', //offers help description of what your command argument does
+  demand: true, //makes mandatory 
+  alias: 't'  //set title command in command line with an alias, used as -t (instead of --title)
+}
+const bodyOptions = {
+  describe: 'Body of the note',
+  demand:true,
+  alias: 'b'
+}
+
+const argv = yargs.command('add', 'Add a new note', {
+  title: titleOptions,
+  body: bodyOptions
+})
+.command('list', 'List all notes')
+.command('read', 'Read a note', {
+  title: titleOptions
+})
+.command('remove', 'Remove a note', {
+  title: titleOptions
+})
+.help()
+.argv //yargs verion of the argument vector object
 let command = argv._[0] //first argument in yargs is the command
 if (command == 'add') {
   let note = notes.addNote(argv.title, argv.body)
