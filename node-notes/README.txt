@@ -49,3 +49,7 @@ TOPICS COVERED
 
 -- Yargs
   -- .command('name of command', 'descrition of command', {argument}) // describes a command, also in last argument takes the parameters of said command and further describes them, requires them, aliases etc
+
+-- Arrow Functions
+  -- arrow functions do NOT bind 'this' keyword or the arguments 'array' (gives us global arguments instead)
+  -- new es6 feature allows us to define a function without the function declaration inside an object
