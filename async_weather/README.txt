@@ -19,3 +19,19 @@ TOPICS COVERED
     -- FIFO (first one in first one out)
 
 -- Pretty print JSON to terminal by using JSON.stringify(json, undefined, #ofSpaces)
+
+-- HTTP (HyperTextTransferProtocol)
+  -- When a request gets made to a website or api, you get the data sent in body (html, json, etc.)
+  -- Response (res)
+    -- status of request
+    -- response headers
+    -- can also find body
+  -- Error
+    -- log out error to screen if request unsuccessful
+    -- null when no errors
+
+-- Encoding strings provided in terminal (using Yargs)
+  -- use String option to let know should be parsed as strings
+
+-- encodeURIComponent(string) --> get a url encoded string back (ie using %20 to represent spaces)
+  -- decodeURIComponent(encodedString) --> converts it back to regular string
