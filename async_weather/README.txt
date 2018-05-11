@@ -35,3 +35,8 @@ TOPICS COVERED
 
 -- encodeURIComponent(string) --> get a url encoded string back (ie using %20 to represent spaces)
   -- decodeURIComponent(encodedString) --> converts it back to regular string
+
+-- Abstracting callbacks and App.js
+  -- App logic should not be apart of app.js and should be as abstracted away as possible (APIs, Database Connections, etc.). It should primarily be used to start our app, 
+     requiring the necessary files
+  -- Callbacks should typically have a error, success parameter. The callback is called with one or the other depending on the success or failure of the async call
