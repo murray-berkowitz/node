@@ -40,3 +40,7 @@ TOPICS COVERED
   -- App logic should not be apart of app.js and should be as abstracted away as possible (APIs, Database Connections, etc.). It should primarily be used to start our app, 
      requiring the necessary files
   -- Callbacks should typically have a error, success parameter. The callback is called with one or the other depending on the success or failure of the async call
+
+-- Using Promises to handle async requests and avoiding "callback hell"
+  -- a promise guarantees that our callbacks will not execute until our data has been successfully retrieved (resolve), or has encountered an error (reject)
+  -- Replace the global Promise object with Bluebird, as it is a more efficient, fleshed out promise library than the built in Promise object. eg: const Promise = require('bluebird')

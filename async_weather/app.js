@@ -1,6 +1,6 @@
 const yargs = require('yargs')
 
-const {geocodeAddress} = require('./geocode/geocode')
+const {geocodeAddress, fetchWeather} = require('./geocode/geocode')
 
 const argv = yargs.options({
     address: {
@@ -14,13 +14,12 @@ const argv = yargs.options({
 .argv
 let {address} = argv
 
-geocodeAddress(address, (err, results) => {
-    if(err){
-        console.log(err)
-    }
-    else {
-        console.log(JSON.stringify(results, undefined, 2))
-    }
+geocodeAddress(address)
+.then(data => {
+    console.log(data)
+    return fetchWeather(data.latitude, data.longitude)
 })
+.then(weaterData => console.log(weaterData.currently.temperature))
+.catch(err => console.log(err))
 
 
