@@ -19,7 +19,7 @@ geocodeAddress(address)
     console.log(data)
     return fetchWeather(data.latitude, data.longitude)
 })
-.then(weaterData => console.log(weaterData.currently.temperature))
+.then(([{statusCode}, weaterData]) => {
+    console.log(`Returned with status ${statusCode}. Temperature at ${weaterData.currently.temperature} degrees`)
+})
 .catch(err => console.log(err))
-
-

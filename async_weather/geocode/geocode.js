@@ -31,7 +31,7 @@ const fetchWeather = (lat, lng) => {
             json: true
         }, (err, res, body) => {
             if(!err && res.statusCode === 200) {
-                resolve(body)
+                resolve([res, body])
             }
             else {
                 reject('Unable to fetch weather')
